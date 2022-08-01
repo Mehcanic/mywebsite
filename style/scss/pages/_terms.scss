@@ -1,0 +1,51 @@
+@use '../components/buttons' as b;
+@use '../rest/variables' as v;
+@use '../rest/mixins' as m;
+
+
+
+#main-terms {
+  margin: 2rem 0;
+  max-width: calc(#{v.$l-screen} - 10em);
+  margin-inline: auto;
+  
+  
+  
+  #terms-main-list > li::marker {
+    font-weight: bold;
+  }
+
+  #terms-main-list {
+    margin-top: 2rem;
+  }
+
+  ol, li {
+    width: 100%;
+  }
+
+
+
+
+  .terms-def {
+    @include m.flex-row;
+    align-items: flex-start;
+    width: 100%;
+
+    h3 {
+      width: 35%;
+    }
+
+    p {
+      width: 65%;
+    }
+  }
+
+  p {
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  #terms-last-edit {
+    margin-top: 5rem;
+    text-align: right;
+  }
+}

@@ -1,0 +1,17 @@
+@use '../components/buttons' as b;
+@use '../rest/variables' as v;
+@use '../rest/mixins' as m;
+
+#main-privacy {
+  margin: 2rem 0;
+  max-width: calc(#{v.$l-screen} - 10rem);
+  margin-inline: auto;
+
+  ol > li::marker {
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0.5rem 0 1rem 0;
+  }
+}

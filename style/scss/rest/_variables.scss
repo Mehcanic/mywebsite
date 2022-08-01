@@ -1,0 +1,41 @@
+// Large screen elements sizes
+
+$l-screen: 1140px;
+$nav-width: 1140px;
+$nav-height: 5.375rem;
+
+$main-content-width: 46rem;
+
+$section-main-height: 46rem;
+
+$footer-height: 8rem;
+
+// Fonts
+
+$ff: 'Ubuntu', sans-serif;
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-bold: 700;
+
+$fs-xsmall: 0.875rem;
+$fs-small: 1rem;
+$fs-normal: 1.5rem;
+$fs-medium: 1.875rem;
+$fs-large: 3rem;
+$fs-xlarge: 4.5rem;
+
+$font-line-height: 1.6;
+
+// Colors
+$clr-primary:#f2f2f2;
+$clr-secondary: #111111;
+$clr-accent: #ff6600;
+$clr-accent-hover: #ff660080;
+$clr-text-light: #ffffff;
+$clr-text-dark: #333333;
+
+
+// Used CSS filter color generator from following codepend: https://codepen.io/sosuke/pen/Pjoqqp
+// Below filter is generated from #FF6600 color.
+$clr-svg: invert(44%) sepia(96%) saturate(2473%) hue-rotate(359deg) brightness(104%) contrast(106%);

@@ -1,0 +1,45 @@
+@use '../components/buttons' as b;
+@use '../rest/variables' as v;
+@use '../rest/mixins' as m;
+
+#main-contact {
+  @include m.flex-column;
+  width: v.$l-screen;
+  margin: 3rem auto 5rem auto;
+  height: 100%;
+  color: v.$clr-text-dark;
+  
+  #contact-title {
+    margin-bottom: 2rem;
+    h2 {
+      font-size: v.$fs-large;
+    }
+  }
+  
+  #contact-content {
+    @include m.flex-row;
+    width: 100%;
+    height: 100%;
+
+    
+    #contact-img {
+      width: calc(#{v.$l-screen} / 2);
+    }
+
+    #contact-boxes {
+      @include m.flex-column;
+      justify-content: space-between;
+      width: calc(#{v.$l-screen} / 2);
+      
+  
+      .box {
+        @include m.flex-row;
+        width: 70%;
+        margin: 3rem;
+        font-size: v.$fs-normal;
+        font-weight: v.$fw-bold;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,61 @@
+@use '../rest/variables' as v;
+@use '../rest/mixins' as m;
+// Navigation buttons
+
+.btn-nav {
+  font-size: v.$fs-small;
+  color: v.$clr-secondary;
+  font-weight: v.$fw-bold;
+}
+
+.btn-nav:active {
+  color: v.$clr-accent;
+}
+
+.btn-nav:hover {
+  color: v.$clr-accent-hover;
+}
+
+.btn-footer {
+  font-size: v.$fs-small;
+  color: v.$clr-secondary;
+  font-weight: v.$fw-normal;
+}
+
+.btn-footer:active {
+  color: v.$clr-accent;
+}
+
+.btn-footer:hover {
+  color: v.$clr-accent;
+}
+
+// Square button
+
+.btn-square {
+  background-color: v.$clr-accent;
+  width: 9.25em;
+  height: 2.875em;
+  font-size: v.$fs-small;
+  color: v.$clr-text-light;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-square:hover {
+  background-color: v.$clr-accent-hover;
+}
+
+// Underline buttons
+
+.btn-learn {
+  border: none;
+  border-bottom: 2px solid v.$clr-accent;
+  font-size: v.$fs-xsmall;
+  padding: 3px 0;
+  color: v.$clr-secondary;
+}
+
+.btn-learn:hover {
+  border-color: v.$clr-accent-hover;
+}

@@ -1,0 +1,86 @@
+@use 'rest/reset';
+@use 'rest/mixins' as m;
+@use 'rest/variables' as v;
+@use 'components/buttons';
+@use 'pages/home';
+@use 'pages/contact';
+@use 'pages/privacy';
+@use 'pages/terms';
+
+
+// General style start
+
+body {
+  font-family: v.$ff;
+  font-size: 100%;
+  background-color: v.$clr-primary;
+  width: 100%;
+  line-height: v.$font-line-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.svgs {
+  width: 5rem;
+  filter: v.$clr-svg;
+}
+
+
+
+// General style end
+
+// Header style start
+
+header {
+  grid-area: header;
+  @include m.flex-row;
+  width: v.$nav-width;
+  height: v.$nav-height;
+  margin: 0 auto;
+  padding: 0.7rem;
+
+  img {
+    width: 6.875rem;
+  }
+
+  ul {
+    @include m.flex-row;
+    width: auto;
+    list-style: none;
+
+    li {
+      padding-inline: 1rem;
+    }
+  }
+
+}
+
+// Header style end
+
+// Footer style start
+
+
+footer {
+  height: v.$footer-height;
+
+  span {
+    display: block;
+    height: 1px;
+    background-color: black;
+    width: 100%;
+  }
+
+  div {
+    @include m.flex-column;
+    font-size: v.$fs-small;
+    margin-top: 1rem;
+    
+    a {
+      color: v.$clr-text-dark;
+      margin: .2rem;
+    }
+  }
+}
+
+// Sooter style end
