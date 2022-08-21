@@ -5,13 +5,13 @@
 #main-home::before {
   position: absolute;
   content: '';
-  top: v.$nav-height;
   width: 100%;
   height: 100%;
   background: rgba($color: #000000, $alpha: 0.5);
 }
 
 #main-home {
+  position: relative;
   background-image: url("../../../images/background-img.jpg");
   height: 100vh;
   background-position: center;
@@ -24,7 +24,8 @@
     @include m.flex-column;
     color: v.$clr-text-light;
     height: 100%;
-    width: v.$l-screen;
+    width: 100%;
+    max-width: v.$l-screen;
     margin-inline: auto;
     text-align: center;
 
@@ -36,21 +37,33 @@
       font-size: v.$fs-normal;
       padding: 0 0 2rem 0;
     }
+
+    a, a:visited {
+      color: v.$clr-primary;
+    }
+    
   }
 
 }
 
 
 #home-section {
-  width: v.$l-screen;
+  width: 100%;
+  max-width: v.$l-screen;
   margin-inline: auto;
   text-align: center;
   margin: 5rem auto;
+
+  h2 {
+    font-size: v.$fs-medium;
+  }
   
   #grid {    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: auto;
+    align-items: center;
     gap: .5rem;
     
     .grid-box {

@@ -35,18 +35,19 @@ body {
 header {
   grid-area: header;
   @include m.flex-row;
-  width: v.$nav-width;
-  height: v.$nav-height;
+  width: 100%;
+  max-width: 1140px;
+  min-height: v.$nav-height;
   margin: 0 auto;
   padding: 0.7rem;
 
   img {
-    width: 6.875rem;
+    max-width: 6.875rem;
   }
 
   ul {
     @include m.flex-row;
-    width: auto;
+    max-width: 100%;
     list-style: none;
 
     li {
@@ -58,16 +59,46 @@ header {
 
 // Header style end
 
+// Hamburger menu start
+
+header {
+
+  span {
+    margin: 2.5px 0;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 1.6rem;
+    right: 1rem;
+    @include m.flex-column;
+    display: none;
+    width: 30px;
+    height: 2rem;
+
+    .bar {
+      height: 3px;
+      width: 2rem;
+      background-color: v.$clr-accent;
+      border-radius: 10px;
+    }
+  }
+
+}
+
+// Hamburger menu end
+
 // Footer style start
 
 
 footer {
   height: v.$footer-height;
+  width: 100%;
 
   span {
     display: block;
     height: 1px;
-    background-color: black;
+    background-color: v.$clr-secondary;
     width: 100%;
   }
 
@@ -84,3 +115,36 @@ footer {
 }
 
 // Sooter style end
+
+
+@media (max-width: 510px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    nav {
+      width: 100%;
+            
+      .nav-links {
+        display: none;
+      
+        li {
+          margin-top: 1rem;
+          padding: .5rem 1rem;
+        }
+      
+      }      
+
+      .nav-links-active {
+        @include m.flex-column;
+        text-align: center;
+        width: 100%;        
+      }
+    }
+
+    .toggle-btn {
+      @include m.flex-column
+    }
+
+  }
+}
