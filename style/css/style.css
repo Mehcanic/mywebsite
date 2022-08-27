@@ -118,7 +118,7 @@ picture {
 
 #main-home {
   position: relative;
-  background-image: url("../../../images/background-img.jpg");
+  background-image: url("../../../images/wd40.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -157,7 +157,7 @@ picture {
   margin: 5rem auto;
 }
 #home-section h2 {
-  font-size: 1.875rem;
+  font-size: 3rem;
 }
 #home-section #grid {
   display: grid;
@@ -181,59 +181,65 @@ picture {
   margin-top: 0.5rem;
 }
 
+#contact-section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 #contact-section {
+  position: relative;
+  background-image: url("../../../images/_MG_4801.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#contact-section div {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-wrap: wrap;
-  max-width: 1140px;
-  margin: 3rem auto 5rem auto;
+  color: #f2f2f2;
+  width: auto;
   height: 100%;
-  color: #333333;
 }
-#contact-section #contact-title {
-  margin-bottom: 2rem;
-}
-#contact-section #contact-title h2 {
+#contact-section div #contact-title h2 {
   font-size: 3rem;
 }
-#contact-section #contact-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  max-width: 100%;
-  height: 100%;
-}
-#contact-section #contact-content #contact-img {
+#contact-section div #contact-content {
+  text-align: center;
   width: 50%;
 }
-#contact-section #contact-content #contact-boxes {
+#contact-section div #contact-content #contact-boxes {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
-#contact-section #contact-content #contact-boxes .box {
+#contact-section div #contact-content #contact-boxes .box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  justify-content: space-around;
   width: 100%;
-  margin: 3rem auto;
+  margin-top: 3rem;
   font-size: 1.5rem;
   font-weight: 700;
 }
-
+#contact-section div #contact-content #contact-boxes .box img {
+  width: 30%;
+}
 @media (max-width: 510px) {
   #main-home #main-hero p {
     margin-inline: 1rem;
@@ -248,77 +254,19 @@ picture {
   #home-section #grid .grid-box h3 {
     font-size: 1.875rem;
   }
-}
-#main-contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  max-width: 1140px;
-  margin: 3rem auto 5rem auto;
-  height: 100%;
-  color: #333333;
-}
-#main-contact #contact-title {
-  margin-bottom: 2rem;
-}
-#main-contact #contact-title h2 {
-  font-size: 3rem;
-}
-#main-contact #contact-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  max-width: 100%;
-  height: 100%;
-}
-#main-contact #contact-content #contact-img {
-  width: 50%;
-}
-#main-contact #contact-content #contact-boxes {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-}
-#main-contact #contact-content #contact-boxes .box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  justify-content: space-around;
-  width: 100%;
-  margin: 3rem auto;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-@media (max-width: 510px) {
-  #main-contact #contact-content #contact-img {
-    display: none;
+  #contact-section div #contact-content #contact-boxes {
+    width: 100%;
   }
-  #main-contact #contact-content #contact-boxes {
-    max-width: 510px;
-  }
-  #main-contact #contact-content #contact-boxes .box {
+  #contact-section div #contact-content #contact-boxes .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: 2rem auto;
+    text-align: center;
   }
-  #main-contact #contact-content #contact-boxes .box img {
-    margin-bottom: 1rem;
+  #contact-section div #contact-content #contact-boxes .box p {
+    width: 100%;
   }
 }
 #main-privacy {
@@ -448,9 +396,6 @@ footer {
   align-content: center;
   justify-content: space-between;
 }
-footer #copy {
-  font-size: 0.875rem;
-}
 footer span {
   display: block;
   height: 1px;
@@ -469,6 +414,10 @@ footer div {
 footer div a {
   color: #333333;
   margin: 0.2rem;
+}
+footer #copy {
+  font-size: 0.875rem;
+  margin: 1rem auto;
 }
 
 @media (max-width: 510px) {

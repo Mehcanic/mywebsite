@@ -3,7 +3,6 @@
 @use 'rest/variables' as v;
 @use 'components/buttons';
 @use 'pages/home';
-@use 'pages/contact';
 @use 'pages/privacy';
 @use 'pages/terms';
 
@@ -96,18 +95,14 @@ footer {
   width: 100%;
   @include m.flex-column;
   justify-content: space-between;
-
-  #copy {
-    font-size: v.$fs-xsmall;
-  }
-
+  
   span {
     display: block;
     height: 1px;
     background-color: v.$clr-secondary;
     width: 100%;
   }
-
+  
   div {
     @include m.flex-column;
     font-size: v.$fs-small;
@@ -118,6 +113,11 @@ footer {
       margin: .2rem;
     }
   }
+  
+    #copy {
+      font-size: v.$fs-xsmall;
+      margin: 1rem auto;
+    }
 }
 
 // Sooter style end

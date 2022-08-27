@@ -12,7 +12,7 @@
 
 #main-home {
   position: relative;
-  background-image: url("../../../images/background-img.jpg");
+  background-image: url("../../../images/wd40.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +46,6 @@
 
 }
 
-
 #home-section {
   width: 100%;
   max-width: v.$l-screen;
@@ -55,7 +54,7 @@
   margin: 5rem auto;
 
   h2 {
-    font-size: v.$fs-medium;
+    font-size: v.$fs-large
   }
   
   #grid {    
@@ -82,49 +81,66 @@
   }
 }
 
-#contact-section {
-  @include m.flex-column;
-  flex-wrap: wrap;
-  max-width: v.$l-screen;
-  margin: 3rem auto 5rem auto;
+#contact-section::before {
+  position: absolute;
+  content: '';
+  width: 100%;
   height: 100%;
-  color: v.$clr-text-dark;
-  
-  #contact-title {
-    margin-bottom: 2rem;
-    h2 {
-      font-size: v.$fs-large;
-    }
-  }
-  
-  #contact-content {
-    @include m.flex-row;
-    max-width: 100%;
-    height: 100%;
-    // min-width: 570px;
+  background: rgba($color: #000000, $alpha: 0.5);
+}
 
-    
-    #contact-img {
-      width: 50%;
-    }
-
-    #contact-boxes {
+#contact-section {
+  position: relative;
+  background-image: url("../../../images/_MG_4801.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+    div {
+      z-index: 2;
       @include m.flex-column;
-      justify-content: space-between;
-      width: 100%;
+      color: v.$clr-primary;
+      width: auto;
+      // margin: 1.5rem auto 3rem auto;
       height: 100%;
+      // color: v.$clr-text-dark;
       
-  
-      .box {
-        @include m.flex-row;
-        justify-content: space-around;
-        width: 100%;
-        margin: 3rem auto; 
-        font-size: v.$fs-normal;
-        font-weight: v.$fw-bold;
+      #contact-title {
+        h2 {
+          font-size: v.$fs-large;
+        }
       }
-    }
-  }  
+      
+      #contact-content {
+        text-align: center;
+        width: 50%;
+
+        #contact-boxes {
+          @include m.flex-column;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 100%;
+                
+          .box {
+            @include m.flex-row;
+            // flex-wrap: wrap;
+            width: 100%;
+            margin-top: 3rem; 
+            font-size: v.$fs-normal;
+            font-weight: v.$fw-bold;
+
+            img {
+              width: 30%;
+            }
+            p {
+              // width: 60%;
+            }
+          }
+        }
+      }  
+  }
 }
 
 
@@ -153,4 +169,24 @@
       }
     }
   }
+
+  #contact-section {
+    div {
+      #contact-content {
+        #contact-boxes {                
+          width: 100%;
+          
+          .box {
+            @include m.flex-column;
+            text-align: center;
+            
+            p {
+            width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
