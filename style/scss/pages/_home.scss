@@ -81,3 +81,30 @@
     }
   }
 }
+
+@media (max-width: 510px) {
+  #main-home {
+    #main-hero {
+      p {
+        margin-inline: 1rem;
+      }
+    }    
+  }
+
+  #home-section {
+    h2 {
+      font-size: v.$fs-slarge;
+    }
+    
+    #grid {
+      .grid-box {
+        margin: 1.75rem 2rem;
+        font-size: v.$fs-bsmall;
+
+      h3 {
+          font-size: v.$fs-medium;
+        }
+      }
+    }
+  }
+}

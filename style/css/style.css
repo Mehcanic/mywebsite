@@ -181,13 +181,29 @@ picture {
   margin-top: 0.5rem;
 }
 
+@media (max-width: 510px) {
+  #main-home #main-hero p {
+    margin-inline: 1rem;
+  }
+  #home-section h2 {
+    font-size: 2.25rem;
+  }
+  #home-section #grid .grid-box {
+    margin: 1.75rem 2rem;
+    font-size: 1.25rem;
+  }
+  #home-section #grid .grid-box h3 {
+    font-size: 1.875rem;
+  }
+}
 #main-contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 1140px;
+  flex-wrap: wrap;
+  max-width: 1140px;
   margin: 3rem auto 5rem auto;
   height: 100%;
   color: #333333;
@@ -204,11 +220,11 @@ picture {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 #main-contact #contact-content #contact-img {
-  width: calc(1140px / 2);
+  width: 50%;
 }
 #main-contact #contact-content #contact-boxes {
   display: flex;
@@ -217,7 +233,8 @@ picture {
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  width: calc(1140px / 2);
+  width: 100%;
+  height: 100%;
 }
 #main-contact #contact-content #contact-boxes .box {
   display: flex;
@@ -225,12 +242,32 @@ picture {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  width: 70%;
-  margin: 3rem;
+  justify-content: space-around;
+  width: 100%;
+  margin: 3rem auto;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
+@media (max-width: 510px) {
+  #main-contact #contact-content #contact-img {
+    display: none;
+  }
+  #main-contact #contact-content #contact-boxes {
+    max-width: 510px;
+  }
+  #main-contact #contact-content #contact-boxes .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 2rem auto;
+  }
+  #main-contact #contact-content #contact-boxes .box img {
+    margin-bottom: 1rem;
+  }
+}
 #main-privacy {
   margin: 2rem 0;
   max-width: calc(1140px - 10rem);
@@ -292,7 +329,7 @@ body {
 }
 
 .svgs {
-  width: 5rem;
+  max-width: 5rem;
   filter: invert(44%) sepia(96%) saturate(2473%) hue-rotate(359deg) brightness(104%) contrast(106%);
 }
 
@@ -351,6 +388,15 @@ header .toggle-btn .bar {
 footer {
   height: 8rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+footer #copy {
+  font-size: 0.875rem;
 }
 footer span {
   display: block;

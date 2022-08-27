@@ -22,7 +22,7 @@ body {
 }
 
 .svgs {
-  width: 5rem;
+  max-width: 5rem;
   filter: v.$clr-svg;
 }
 
@@ -94,6 +94,12 @@ header {
 footer {
   height: v.$footer-height;
   width: 100%;
+  @include m.flex-column;
+  justify-content: space-between;
+
+  #copy {
+    font-size: v.$fs-xsmall;
+  }
 
   span {
     display: block;

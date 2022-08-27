@@ -4,7 +4,8 @@
 
 #main-contact {
   @include m.flex-column;
-  width: v.$l-screen;
+  flex-wrap: wrap;
+  max-width: v.$l-screen;
   margin: 3rem auto 5rem auto;
   height: 100%;
   color: v.$clr-text-dark;
@@ -18,28 +19,53 @@
   
   #contact-content {
     @include m.flex-row;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
+    // min-width: 570px;
 
     
     #contact-img {
-      width: calc(#{v.$l-screen} / 2);
+      width: 50%;
     }
 
     #contact-boxes {
       @include m.flex-column;
       justify-content: space-between;
-      width: calc(#{v.$l-screen} / 2);
+      width: 100%;
+      height: 100%;
       
   
       .box {
         @include m.flex-row;
-        width: 70%;
-        margin: 3rem;
+        justify-content: space-around;
+        width: 100%;
+        margin: 3rem auto; 
         font-size: v.$fs-normal;
         font-weight: v.$fw-bold;
       }
     }
+  }  
+}
+
+@media (max-width: 510px) {
+  #main-contact {
+    #contact-content {
+      #contact-img {
+        display: none;
+      }
+
+      #contact-boxes {
+        max-width: 510px;
+        
+        .box {
+          @include m.flex-column;
+          margin: 2rem auto;
+
+          img {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
   }
-  
 }
