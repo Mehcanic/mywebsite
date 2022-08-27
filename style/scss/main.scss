@@ -151,6 +151,26 @@ footer {
     .toggle-btn {
       @include m.flex-column
     }
+  }
 
+  #contact-section {
+    #contact-content {
+      #contact-img {
+        display: none;
+      }
+
+      #contact-boxes {
+        max-width: 510px;
+        
+        .box {
+          @include m.flex-column;
+          margin: 2rem auto;
+
+          img {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
   }
 }
