@@ -199,21 +199,20 @@ picture {
 }
 #contact-section div {
   z-index: 2;
+  color: #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
-  color: #f2f2f2;
-  width: auto;
-  height: 100%;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
 #contact-section div #contact-title h2 {
   font-size: 3rem;
+  margin-top: 2rem;
 }
 #contact-section div #contact-content {
-  text-align: center;
-  width: 50%;
+  width: 100%;
 }
 #contact-section div #contact-content #contact-boxes {
   display: flex;
@@ -221,26 +220,21 @@ picture {
   justify-content: center;
   align-items: center;
   align-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
-  height: 100%;
 }
 #contact-section div #contact-content #contact-boxes .box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  margin-top: 3rem;
   font-size: 1.5rem;
-  font-weight: 700;
+  margin-bottom: 2rem;
 }
 #contact-section div #contact-content #contact-boxes .box img {
-  width: 30%;
+  margin-bottom: 1rem;
 }
+
 @media (max-width: 510px) {
+  #main-home #main-hero h1 {
+    line-height: 5.5rem;
+    margin-bottom: 1rem;
+  }
   #main-home #main-hero p {
     margin-inline: 1rem;
   }
@@ -254,20 +248,6 @@ picture {
   #home-section #grid .grid-box h3 {
     font-size: 1.875rem;
   }
-  #contact-section div #contact-content #contact-boxes {
-    width: 100%;
-  }
-  #contact-section div #contact-content #contact-boxes .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-  }
-  #contact-section div #contact-content #contact-boxes .box p {
-    width: 100%;
-  }
 }
 #main-privacy {
   margin: 2rem 0;
@@ -280,7 +260,17 @@ picture {
 #main-privacy p {
   margin: 0.5rem 0 1rem 0;
 }
+#main-privacy #terms-last-edit {
+  margin-top: 3rem;
+  text-align: right;
+}
 
+@media (max-width: 510px) {
+  #main-privacy {
+    max-width: 90%;
+    margin: 1rem 2rem;
+  }
+}
 #main-terms {
   margin: 2rem 0;
   max-width: calc(1140px - 10em);
@@ -314,10 +304,31 @@ picture {
   margin: 0.5rem 0 1rem 0;
 }
 #main-terms #terms-last-edit {
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: right;
 }
 
+@media (max-width: 510px) {
+  #main-terms {
+    max-width: 90%;
+    margin: 1rem 2rem 0 1rem;
+  }
+  #main-terms #box {
+    width: 100%;
+  }
+  #main-terms #box .terms-def {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #main-terms #box .terms-def h3, #main-terms #box .terms-def p {
+    width: 100%;
+  }
+}
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 100%;

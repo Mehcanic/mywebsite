@@ -14,4 +14,16 @@
   p {
     margin: 0.5rem 0 1rem 0;
   }
+
+  #terms-last-edit {
+    margin-top: 3rem;
+    text-align: right;
+  }
+}
+
+@media (max-width: 510px) {
+  #main-privacy {
+    max-width: 90%;
+    margin: 1rem 2rem;
+  }
 }

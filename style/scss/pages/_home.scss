@@ -54,7 +54,7 @@
   margin: 5rem auto;
 
   h2 {
-    font-size: v.$fs-large
+    font-size: v.$fs-large;
   }
   
   #grid {    
@@ -97,56 +97,94 @@
   background-repeat: no-repeat;
   background-size: cover;
   
-    div {
-      z-index: 2;
-      @include m.flex-column;
-      color: v.$clr-primary;
-      width: auto;
-      // margin: 1.5rem auto 3rem auto;
-      height: 100%;
-      // color: v.$clr-text-dark;
+  div {
+    z-index: 2;
+    color: v.$clr-primary;
+    @include m.flex-column;
+    padding: 1rem .5rem .5rem .5rem;
+
+    #contact-title {
       
-      #contact-title {
-        h2 {
-          font-size: v.$fs-large;
-        }
+      h2 {
+        font-size: v.$fs-large;
+        margin-top: 2rem;
       }
-      
-      #contact-content {
-        text-align: center;
-        width: 50%;
+    }
 
-        #contact-boxes {
-          @include m.flex-column;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          width: 100%;
-          height: 100%;
-                
-          .box {
-            @include m.flex-row;
-            // flex-wrap: wrap;
-            width: 100%;
-            margin-top: 3rem; 
-            font-size: v.$fs-normal;
-            font-weight: v.$fw-bold;
+    #contact-content {
+      width: 100%;
 
-            img {
-              width: 30%;
-            }
-            p {
-              // width: 60%;
-            }
+      #contact-boxes {
+        @include m.flex-column;
+        width: 100%;
+
+        .box {
+          font-size: v.$fs-normal;
+          margin-bottom: 2rem;
+
+          img {
+            margin-bottom: 1rem;
           }
         }
-      }  
-  }
+      }
+    }
+  } 
+//     div {
+//       z-index: 2;
+//       @include m.flex-column;
+//       color: v.$clr-primary;
+//       width: auto;
+//       // margin: 1.5rem auto 3rem auto;
+//       height: 100%;
+//       // color: v.$clr-text-dark;
+      
+//       #contact-title {
+//         h2 {
+//           font-size: v.$fs-large;
+//         }
+//       }
+      
+//       #contact-content {
+//         text-align: center;
+//         width: 50%;
+
+//         #contact-boxes {
+//           @include m.flex-column;
+//           justify-content: space-between;
+//           flex-wrap: wrap;
+//           width: 100%;
+//           height: 100%;
+                
+//           .box {
+//             @include m.flex-row;
+//             // flex-wrap: wrap;
+//             width: 100%;
+//             margin-top: 3rem; 
+//             font-size: v.$fs-normal;
+//             font-weight: v.$fw-bold;
+
+//             img {
+//               width: 30%;
+//             }
+//             p {
+//               // width: 60%;
+//             }
+//           }
+//         }
+//       }  
+//   }
 }
 
 
 @media (max-width: 510px) {
   #main-home {
     #main-hero {
+
+      h1 {
+        line-height: 5.5rem;
+        margin-bottom: 1rem;
+      }
+
       p {
         margin-inline: 1rem;
       }
@@ -170,23 +208,24 @@
     }
   }
 
-  #contact-section {
-    div {
-      #contact-content {
-        #contact-boxes {                
-          width: 100%;
+  // #contact-section {
+  //   div {
+  //     #contact-content {
+  //       #contact-boxes {                
+  //         width: 100%;
           
-          .box {
-            @include m.flex-column;
-            text-align: center;
+  //         .box {
+  //           @include m.flex-column;
+  //           text-align: center;
+  //           width: 100%;
             
-            p {
-            width: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
+  //           p {
+  //           width: 100%;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
 }
